@@ -11,10 +11,9 @@ const About = () => {
             &amp; Mobile apps.
           </h1>
           <p className="mb-8 leading-relaxed">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius modi
-            ducimus voluptate ab enim quaerat sapiente deserunt. Itaque, at enim
-            accusamus molestiae laborum voluptatem dolore aperiam quasi ut quia
-            ea!
+            develop morden looking web application which have great User
+            Interface and great User Experience with morden technology , latest
+            Framework and laibrary.
           </p>
           <div className="flex justify-center">
             <a
