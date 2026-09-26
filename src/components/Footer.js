@@ -2,12 +2,9 @@ import React from "react";
 import {
   FaLinkedin,
   FaStackOverflow,
-  FaFacebook,
   FaGithub,
   FaTwitter,
-  FaInstagram,
   FaMedium,
-  FaWhatsapp,
 } from "react-icons/fa";
 const Footer = () => {
   return (
@@ -25,7 +22,7 @@ const Footer = () => {
           target={"_blank"}
           rel="noreferrer"
           className="px-4 py-2"
-          href="https://www.linkedin.com/in/dhruv-sakariya-764838207/"
+          href="https://www.linkedin.com/in/dhruvsakariya/"
         >
           <FaLinkedin color="white" size={"36px"} />
         </a>
@@ -41,25 +38,9 @@ const Footer = () => {
           target={"_blank"}
           rel="noreferrer"
           className="px-4 py-2"
-          href="https://stackoverflow.com/users/15630174/dhruv-codercode"
+          href="https://stackoverflow.com/users/15630174/dhruv-sakariya"
         >
           <FaStackOverflow color="white" size={"36px"} />
-        </a>
-        <a
-          target={"_blank"}
-          rel="noreferrer"
-          className="px-4 py-2"
-          href="https://www.facebook.com/dhruv.sakariya.186"
-        >
-          <FaFacebook color="white" size={"36px"} />
-        </a>
-        <a
-          target={"_blank"}
-          rel="noreferrer"
-          className="px-4 py-2"
-          href="https://www.instagram.com/dhruvsakariya4/"
-        >
-          <FaInstagram color="white" size={"36px"} />
         </a>
         <a
           target={"_blank"}
@@ -68,14 +49,6 @@ const Footer = () => {
           href="https://medium.com/@dhruvsakariya2304"
         >
           <FaMedium color="white" size={"36px"} />
-        </a>
-        <a
-          target={"_blank"}
-          rel="noreferrer"
-          className="px-4 py-2"
-          href="https://wa.me/919825690439"
-        >
-          <FaWhatsapp color="white" size={"36px"} />
         </a>
       </footer>
       <p className="text-center py-2">

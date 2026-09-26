@@ -30,11 +30,12 @@ const About = () => {
             </a>
           </div>
         </div>
-        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+        <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 flex justify-center">
           <img
-            className="object-cover object-center rounded"
-            alt="hero"
-            src="./Dhruv.png"
+            className="object-contain object-top rounded"
+            style={{ maxHeight: "420px", width: "auto" }}
+            alt="Dhruv Sakariya"
+            src={process.env.PUBLIC_URL + "/Dhruv_passport_photo.jpeg"}
           />
         </div>
       </div>
