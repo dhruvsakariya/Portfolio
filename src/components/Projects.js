@@ -6,6 +6,19 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = React.useState(null);
   const [activeImage, setActiveImage] = React.useState("");
 
+  React.useEffect(() => {
+    if (!selectedProject) return;
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") {
+        setSelectedProject(null);
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedProject]);
+
   const handleProjectClick = (project) => {
     if (project.link) {
       window.open(project.link, "_blank", "noreferrer");
@@ -51,16 +64,17 @@ const Projects = () => {
               type="button"
               key={`${project.title}-${project.subtitle}`}
               onClick={() => handleProjectClick(project)}
-              className="sm:w-1/2 w-full p-4 text-left"
+              className="group sm:w-1/2 w-full p-4 text-left"
             >
-              <div className="flex relative h-80 overflow-hidden rounded-lg border border-gray-800">
+              <div className="flex relative h-80 overflow-hidden rounded-lg border border-gray-800 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-black/20">
                 <img
                   alt={project.title}
                   className="absolute inset-0 w-full h-full object-cover object-center"
                   src={project.image}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/70 to-transparent" />
-                <div className="px-8 py-10 relative z-10 w-full flex flex-col justify-end">
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/20 via-gray-900/10 to-transparent transition-all duration-300 group-hover:from-gray-900/80 group-hover:via-gray-900/60 group-hover:to-gray-900/20" />
+                <div className="pointer-events-none absolute inset-0 bg-black/0 opacity-0 transition-all duration-300 group-hover:bg-black/10 group-hover:opacity-100" />
+                <div className="px-8 py-10 relative z-10 w-full flex flex-col justify-end translate-y-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                   <div className="mb-2 flex flex-wrap gap-2">
                     {project.tags?.slice(0, 2).map((tag) => (
                       <span
@@ -88,8 +102,14 @@ const Projects = () => {
       </div>
 
       {selectedProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4">
-          <div className="max-h-[90vh] w-full max-w-3xl overflow-y-auto rounded-xl border border-gray-700 bg-gray-900 p-6 text-left shadow-2xl">
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
+          onClick={() => setSelectedProject(null)}
+        >
+          <div
+            className="project-modal-scroll max-h-[92vh] w-full max-w-5xl overflow-y-auto rounded-xl border border-gray-700 bg-gray-900 p-6 text-left shadow-2xl"
+            onClick={(event) => event.stopPropagation()}
+          >
             <div className="flex items-start justify-between gap-4">
               <div>
                 <p className="text-xs uppercase tracking-[0.2em] text-green-400">
@@ -114,7 +134,7 @@ const Projects = () => {
                   <img
                     alt={selectedProject.title}
                     src={activeImage || galleryImages[0]}
-                    className="h-64 w-full object-contain md:h-80"
+                    className="h-80 w-full object-contain md:h-[28rem]"
                   />
                 </div>
 
@@ -167,7 +187,7 @@ const Projects = () => {
               </a>
             ) : (
               <div className="mt-6 rounded border border-dashed border-gray-600 bg-gray-800 px-4 py-3 text-sm text-gray-300">
-                This project is not publicly shareable, but I can share a detailed walkthrough or demo during conversation.
+                This project is not publicly shareable.
               </div>
             )}
           </div>
