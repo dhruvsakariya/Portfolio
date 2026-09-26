@@ -6,27 +6,34 @@ const About = () => {
       <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-            Hi, I'm Dhruv Sakariya.
-            <br className="hidden lg:inline-block" />I love to build amazing Web
-            &amp; Mobile apps.
+            Hi, I'm Dhruv Sakariya — Full-Stack Developer.
+            <br className="hidden lg:inline-block" />I build beautiful, fast,
+            and accessible web & mobile applications.
           </h1>
           <p className="mb-8 leading-relaxed">
-            develop morden looking web application which have great User
-            Interface and great User Experience with morden technology , latest
-            Framework and laibrary.
+            I'm a passionate developer who designs and ships modern web and
+            mobile experiences. I build responsive, accessible interfaces and
+            reliable client-side architecture that help teams move faster and
+            deliver measurable value.
+            <br />
+            <br />
+            My work ranges from prototypes to production systems across
+            consumer apps, admin dashboards, and e-commerce integrations. I
+            enjoy partnering with designers and product teams to turn ideas
+            into polished products that users love.
           </p>
           <div className="flex justify-center">
             <a
               href="#contact"
               className="inline-flex text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 rounded text-lg"
             >
-              Work With Me
+              Let's Work Together
             </a>
             <a
               href="#projects"
               className="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg"
             >
-              See My Past Work
+              View My Projects
             </a>
           </div>
         </div>
