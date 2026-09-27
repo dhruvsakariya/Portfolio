@@ -1,21 +1,5 @@
 export const projects = [
   {
-    title: "Blog Post",
-    subtitle: "NextJs Stack",
-    description:
-      "A publishing-focused web app with a blog experience, contact flow, and clean content-focused UX.",
-    image: process.env.PUBLIC_URL + "/blog-post.gif",
-    gallery: [
-      process.env.PUBLIC_URL + "/blog-post.gif",
-      process.env.PUBLIC_URL + "/food-order.gif",
-      process.env.PUBLIC_URL + "/shopping-app.gif",
-    ],
-    link: "https://blog-post-pink.vercel.app/",
-    tags: ["Next.js", "MongoDB", "Blog", "UI/UX"],
-    details:
-      "Built a content-driven web app with a modern editorial layout, a dedicated contact section, and a scalable structure for future blog growth.",
-  },
-  {
     title: "Snapsight",
     subtitle: "Event Content Intelligence Platform",
     description:
@@ -68,6 +52,69 @@ export const projects = [
     details:
       "Contributed to goGlocal, a platform focused on simplifying international e-commerce and helping businesses expand into global markets. The platform provides tools and insights for managing cross-border selling, optimizing international sales strategies, and improving global customer reach through a streamlined digital experience.",
     privateProject: true,
+  },
+  {
+    title: "Listing Hero",
+    subtitle: "AI-Powered Amazon Listing Optimization",
+    description:
+      "An AI-powered platform that helps brands and agencies audit, optimize, localize, and enhance Amazon product listings with AI-generated content, images, videos, and A+ content.",
+    image: process.env.PUBLIC_URL + "/listing-hero/thumbnail.png",
+    gallery: [
+      process.env.PUBLIC_URL + "/listing-hero/gallery-1.png",
+      process.env.PUBLIC_URL + "/listing-hero/gallery-2.png",
+      process.env.PUBLIC_URL + "/listing-hero/gallery-3.png",
+    ],
+    tags: [
+      "AI",
+      "Amazon",
+      "E-commerce",
+      "Listing Optimization",
+      "A+ Content",
+      "Image Generation",
+    ],
+    details:
+      "Contributed to Listing Hero, an AI-powered e-commerce platform built for brands and agencies managing Amazon listings. The platform provides AI-powered listing audits, SEO optimization, one-click content improvements, product image generation, A+ content creation, product videos, localization across 15+ Amazon marketplaces, smart analytics, and bulk image processing. Its AI workflows help teams optimize product listings and create Amazon-ready content at scale.",
+    privateProject: true,
+  },
+  {
+    title: "Vamah",
+    subtitle:
+      "Build websites, apps, design mockups, or prototypes without any code. Just chat!",
+    description:
+      "An AI-powered app builder that lets you create fully functional websites and applications using natural language, without writing code.",
+    image: process.env.PUBLIC_URL + "/vamah/thumbnail.png",
+    gallery: [
+      process.env.PUBLIC_URL + "/vamah/gallery-1.png",
+      process.env.PUBLIC_URL + "/vamah/gallery-2.png",
+      process.env.PUBLIC_URL + "/vamah/gallery-3.png",
+    ],
+    tags: [
+      "AI",
+      "No-Code",
+      "App Builder",
+      "Web Development",
+      "Prototyping",
+      "Automation",
+    ],
+    details:
+      "Contributed to Vamah, an AI-powered platform that turns natural language prompts into fully functional websites and applications. Vamah enables users to build, customize, preview, and deploy projects through conversational interactions without traditional coding. The platform supports AI-generated applications, built-in databases, templates, image-to-website replication, website cloning, third-party integrations, embeds, live previews, and continuous project updates through conversational prompts.",
+    privateProject: true,
+  },
+  {
+    title: "Blog Post",
+    subtitle: "NextJs Stack",
+    description:
+      "A publishing-focused web app with a blog experience, contact flow, and clean content-focused UX.",
+    image: process.env.PUBLIC_URL + "/blog-post.gif",
+    gallery: [
+      process.env.PUBLIC_URL + "/blog-post.gif",
+      process.env.PUBLIC_URL + "/food-order.gif",
+      process.env.PUBLIC_URL + "/shopping-app.gif",
+    ],
+    link: "https://blog-post-pink.vercel.app/",
+    tags: ["Next.js", "MongoDB", "Blog", "UI/UX"],
+    details:
+      "Built a content-driven web app with a modern editorial layout, a dedicated contact section, and a scalable structure for future blog growth.",
   },
 ];
 
